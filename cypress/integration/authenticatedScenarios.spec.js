@@ -1,3 +1,4 @@
+/* eslint-disable indent */
 
 describe('Scenarios where authentication is a pre-requirement', () => {
   beforeEach(() => {
@@ -35,7 +36,8 @@ describe('Scenarios where authentication is a pre-requirement', () => {
   it('logs out', () => {
     cy.visit('/')
     cy.wait('@getNotes')
-    if (Cypress.config('viewportWidth') < Cypress.env('viewportWidthBreakpoint')) {
+
+  if (Cypress.config('viewportWidth') < Cypress.env('viewportWidthBreakpoint')) {
       cy.get('.navbar-toggle.collapsed')
         .should('be.visible')
         .click()
